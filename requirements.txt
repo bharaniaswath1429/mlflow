@@ -1,0 +1,23 @@
+# Machine Learning Libraries
+scikit-learn==1.3.0  # Specify the version of scikit-learn you want
+xgboost==1.6.2       # XGBoost for model training
+imbalanced-learn==0.10.0  # For handling imbalanced datasets (SMOTE)
+
+# Data Manipulation
+pandas==2.0.3        # For data manipulation
+numpy==1.24.4        # For numerical computations
+
+# MLflow for tracking experiments and models
+mlflow==2.8.0
+
+# Matplotlib for visualizations
+matplotlib==3.8.0
+
+# Hyperparameter Tuning
+scipy==1.11.2  # Needed for GridSearchCV and other statistical operations
+
+# Encoding compatibility for reading CSVs
+chardet==5.2.0  
+
+# Python version compatibility for Mlflow
+protobuf==3.19.4  # Mlflow sometimes needs specific protobuf versions for compatibility
