@@ -167,7 +167,7 @@ def log_top_features(model, X_columns, model_name):
     except AttributeError:
         print(f"Model {model_name} does not support feature importance logging.")
 
-def train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_grids):
+def train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_grids, X_columns):
     mlflow.set_tracking_uri("http://localhost:5000")
     mlflow.set_experiment("Promotion Prediction Models")
     
@@ -233,7 +233,7 @@ def train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_gr
                 mlflow.log_artifact(f'roc_{name}.png')
                 plt.show()
                 
-                log_top_features(best_model, X.columns, name)
+                log_top_features(best_model, X_columns, name)
                 
                 mlflow.sklearn.log_model(best_model, f"best_model_{name}")
             finally:
@@ -279,7 +279,7 @@ def main():
     
     X_train, X_test = scale_features(X_train, X_test)
     
-    train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_grids)
+    train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_grids, X.columns)
 
 if __name__ == "__main__":
     main()
