@@ -1,0 +1,32 @@
+name: CI/CD for MLflow Model
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install mlflow
+          pip install imbalanced-learn
+          pip install xgboost
+      
+      - name: Run training script
+        env:
+          MLFLOW_TRACKING_URI: http://localhost:5000
+        run: |
+          python employee_model_training.py
