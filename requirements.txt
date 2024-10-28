@@ -14,7 +14,7 @@ mlflow==2.8.0
 matplotlib==3.7.2
 
 # Hyperparameter Tuning
-scipy==1.11.2  # Needed for GridSearchCV and other statistical operations
+scipy==1.10.1  # Needed for GridSearchCV and other statistical operations
 
 # Encoding compatibility for reading CSVs
 chardet==5.2.0  
