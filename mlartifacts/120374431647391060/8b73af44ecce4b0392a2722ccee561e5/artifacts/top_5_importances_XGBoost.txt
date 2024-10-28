@@ -1,0 +1,6 @@
+                            Feature  Importance
+2                avg_training_score    0.114166
+0                   no_of_trainings    0.110486
+10  designation_Principle Architect    0.090083
+11          designation_QA Engineer    0.080721
+4          designation_Data Analyst    0.078575

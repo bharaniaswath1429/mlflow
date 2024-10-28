@@ -1,0 +1,6 @@
+                          Feature  Importance
+2              avg_training_score    0.530961
+0                 no_of_trainings    0.102077
+8             designation_Manager    0.041866
+12  designation_Software Engineer    0.040598
+5       designation_Data Engineer    0.034647

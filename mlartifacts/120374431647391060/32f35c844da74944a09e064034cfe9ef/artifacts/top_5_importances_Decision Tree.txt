@@ -1,0 +1,6 @@
+                          Feature  Importance
+2              avg_training_score    0.679824
+0                 no_of_trainings    0.117607
+1               length_of_service    0.033560
+3               designation_Admin    0.028095
+12  designation_Software Engineer    0.026606

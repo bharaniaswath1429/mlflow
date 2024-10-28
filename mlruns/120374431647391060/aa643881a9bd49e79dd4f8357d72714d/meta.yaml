@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/120374431647391060/aa643881a9bd49e79dd4f8357d72714d/artifacts
+end_time: 1730104520285
+entry_point_name: ''
+experiment_id: '120374431647391060'
+lifecycle_stage: active
+run_id: aa643881a9bd49e79dd4f8357d72714d
+run_name: Random Forest
+run_uuid: aa643881a9bd49e79dd4f8357d72714d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730103222552
+status: 3
+tags: []
+user_id: BharaniAswathR

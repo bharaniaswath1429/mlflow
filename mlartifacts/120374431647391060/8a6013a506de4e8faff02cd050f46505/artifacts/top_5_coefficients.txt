@@ -1,0 +1,6 @@
+                       Feature  Coefficient
+3            designation_Admin     1.253914
+6   designation_Data Scientist     1.237867
+7  designation_DevOps Engineer     1.232111
+8          designation_Manager     1.227321
+5    designation_Data Engineer     1.209553

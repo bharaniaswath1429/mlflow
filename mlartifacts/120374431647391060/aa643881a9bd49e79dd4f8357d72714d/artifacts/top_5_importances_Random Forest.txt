@@ -1,0 +1,6 @@
+                          Feature  Importance
+2              avg_training_score    0.549668
+0                 no_of_trainings    0.098642
+8             designation_Manager    0.041679
+11        designation_QA Engineer    0.036196
+12  designation_Software Engineer    0.035792

@@ -1,0 +1,6 @@
+                     Feature  Importance
+2         avg_training_score    0.534787
+0            no_of_trainings    0.108626
+8        designation_Manager    0.040257
+5  designation_Data Engineer    0.036308
+4   designation_Data Analyst    0.033973

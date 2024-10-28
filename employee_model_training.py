@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import time
 import mlflow
 import mlflow.sklearn
+from mlflow.tracking import MlflowClient
 
 def load_and_preprocess_data(file_path):
     data = pd.read_csv(file_path, encoding="ISO-8859-1", engine="python")
@@ -63,7 +64,8 @@ def log_top_features(model, X_columns, model_name):
 
 def train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_grids, X_columns):
     mlflow.set_tracking_uri("http://localhost:5000")
-    mlflow.set_experiment("Promotion Prediction Models")
+    mlflow.set_experiment("Promotion Prediction Models CI/CD")
+    client = MlflowClient()
     
     for name, model in models.items():
         with mlflow.start_run(run_name=name):
@@ -128,8 +130,17 @@ def train_and_evaluate_models(X_train, X_test, y_train, y_test, models, param_gr
                 plt.show()
                 
                 log_top_features(best_model, X_columns, name)
-                
-                mlflow.sklearn.log_model(best_model, f"best_model_{name}")
+                registered_model_name = f"{name}_Model"
+                mlflow.sklearn.log_model(best_model, registered_model_name)
+                try:
+                    model_versions = client.get_latest_versions(registered_model_name, stages=['Production'])
+                    if model_versions:
+                        print(f"Registered {name} model as version {model_versions[-1].version}.")
+                    else:
+                        print(f"Model {registered_model_name} has not been registered yet.")
+                except Exception as e:
+                    print(f"Error retrieving model versions: {e}")
+
             finally:
                 mlflow.end_run()
 
