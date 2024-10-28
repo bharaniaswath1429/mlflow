@@ -11,7 +11,7 @@ numpy==1.24.4        # For numerical computations
 mlflow==2.8.0
 
 # Matplotlib for visualizations
-matplotlib==3.8.0
+matplotlib==3.7.2
 
 # Hyperparameter Tuning
 scipy==1.11.2  # Needed for GridSearchCV and other statistical operations
