@@ -1,5 +1,5 @@
 # Machine Learning Libraries
-scikit-learn==1.3.0  # Specify the version of scikit-learn you want
+scikit-learn==1.2.2  # Specify the version of scikit-learn you want
 xgboost==1.6.2       # XGBoost for model training
 imbalanced-learn==0.10.0  # For handling imbalanced datasets (SMOTE)
 
